@@ -1,0 +1,49 @@
+.custom-navbar {
+      background-color: #FFD966;
+      color: #5D4037;
+}
+.custom-navbar .navbar-brand {
+      color: #5D4037;
+}
+.custom-navbar .btn-outline-dark {
+      color: #5D4037;
+      border-color: #5D4037;
+}
+.add-btn {
+      background-color: #FF7F50;
+      color: #FFF5E1;
+      border: none;
+}
+.add-btn:hover {
+      background-color: #FF6347;
+      color: #FFF5E1;
+}
+.recipe-title-bar {
+      background-color: #FF6347;
+      color: #FFF5E1;
+      padding: 8px;
+      font-weight: bold;
+      text-align: center;
+}
+
+/* Recipies */
+.card {
+      background-color: #FFF5E1;
+      color: #5D4037;
+}
+
+.card-stats {
+      background-color: #F6E2B3;
+      color: #5D4037;
+}
+
+footer {
+      background-color: #3E2723;
+      color: #FFF5E1;
+}
+
+/* Search Bar */
+.form-control {
+      border-color: #5D4037;
+      color: #5D4037;
+}
