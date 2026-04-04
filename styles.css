@@ -1,12 +1,12 @@
 /* Dashboard */
 body {
-  background-color: #FFF5E1; /* cream */
-  color: #5D4037; /* dark brown text */
+  background-color: #FFF5E1;
+  color: #5D4037;
   font-family: Arial, sans-serif;
 }
 
 .navbar {
-  background-color: #FFD966; /* warm yellow */
+  background-color: #FFD966;
 }
 
 .navbar .navbar-brand {
@@ -15,18 +15,18 @@ body {
 }
 
 .add-btn {
-  background-color: #FF7F50; /* orange */
+  background-color: #FF7F50;
   color: #FFF5E1;
   border: none;
 }
 
 .add-btn:hover {
-  background-color: #FF6347; /* darker red/orange */
+  background-color: #FF6347;
   color: #FFF5E1;
 }
 
 .recipe-title-bar {
-  background-color: #FF6347; /* tomato red */
+  background-color: #FF6347;
   color: #FFF5E1;
   padding: 8px;
   text-align: center;
@@ -39,7 +39,7 @@ body {
 }
 
 .card-stats {
-  background-color: #F6E2B3; /* light beige */
+  background-color: #F6E2B3;
 }
 
 /* Search Bar */
@@ -48,7 +48,7 @@ input.form-control {
 }
 
 footer {
-  background-color: #3E2723; /* dark brown */
+  background-color: #3E2723;
   color: #FFF5E1;
 }
 
