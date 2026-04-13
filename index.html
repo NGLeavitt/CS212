@@ -31,50 +31,6 @@
         <button class="btn add-btn">+ Add Recipe</button>
       </div>
     </div>
-
-<!-- filter bar -->
-<div class="row mb-3 filter-bar align-items-center">
-
-  <!-- category dropdown -->
-  <div class="col-sm-6 col-md-3 mb-2">
-    <select id="filter-category" class="form-select">
-      <option value="">All Categories</option>
-      <option value="breakfast">Dessert</option>
-      <option value="lunch">Dinner</option>
-      <option value="dinner">Lunch</option>
-      <option value="dessert">Breakfast</option>
-      <option value="snacks">Snacks</option>
-      <option value="n/a">N/A</option>
-    </select>
-  </div>
-
-  <!-- sort dropdown -->
-  <div class="col-sm-6 col-md-3 mb-2">
-    <select id="filter-sort" class="form-select">
-      <option value="">Sort By</option>
-      <option value="name-asc">Name (A → Z)</option>
-      <option value="name-desc">Name (Z → A)</option>
-      <option value="time-asc">Cook Time (Low → High)</option>
-      <option value="time-desc">Cook Time (High → Low)</option>
-      <option value="date-asc">Date Added (Oldest First)</option>
-      <option value="date-desc">Date Added (Newest First)</option>
-    </select>
-  </div>
-
-  <!-- favorites only toggle/placeholder -->
-  <div class="col-sm-6 col-md-3 mb-2 d-flex align-items-center gap-2">
-    <div class="form-check form-switch mb-0">
-      <input class="form-check-input" type="checkbox" id="filter-favorites">
-      <label class="form-check-label" for="filter-favorites">Favorites Only</label>
-    </div>
-  </div>
-
-  <!-- result hint and clear button -->
-  <div class="col-sm-6 col-md-3 mb-2 d-flex align-items-center justify-content-end gap-2">
-    <span id="filter-hint" class="filter-hint"></span>
-    <button id="clear-filters-btn" class="btn btn-sm clear-btn">✕ Clear</button>
-  </div>
-</div>
     
     <!-- Recipes -->
     <div class="row">
