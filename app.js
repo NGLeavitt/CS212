@@ -17,6 +17,12 @@ function DisplaySavedRecipes(){
   // this requires the html and css of the recipes, but right now the retrieval of the recipes from local storage can be coded
   if (localStorage.getItem("savedRecipes") != null) {
     savedRecipes = JSON.parse(localStorage.getItem("savedRecipes"));
+    savedRecipes.forEach((recipe) => {
+      $("#recipe-dashboard").append(
+    })
+  }
+  else {
+    $("#recipe-dashboard").append("<p>You have no saved recipes yet</p>");
   }
 }
 
