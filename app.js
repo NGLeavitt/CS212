@@ -19,6 +19,15 @@ function DisplaySavedRecipes(){
     savedRecipes = JSON.parse(localStorage.getItem("savedRecipes"));
     savedRecipes.forEach((recipe) => {
       $("#recipe-dashboard").append(
+        `<div class="col-md-4 mb-3">
+          <div class="card shadow-sm">
+            <div class="recipe-title-bar">${recipe.name}</div>
+            <img src="https://via.placeholder.com/300x150" class="card-img-top">
+            <div class="card-body">
+              <p class="card-text">${recipe.category} • ${recipe.cook_time}</p>
+            </div>
+          </div>
+        </div>`)
     })
   }
   else {
@@ -45,11 +54,11 @@ function AddRecipe() {
   const NewRecipeServings = document.getElementById("add-recipe-form-servings").value;
   let NewRecipeIngredients = [];
   for (i = 1; i <= NewRecipeIngredientsCount; i++){
-    NewRecipeIngredients.push(document.getElementByID(`add-recipe-form-ingredient$(i)`);
+    NewRecipeIngredients.push(document.getElementByID(`add-recipe-form-ingredient${i}`);
   }
   let NewRecipeInstructions = [];
   for (i = 1; i <= NewRecipeInstructionsCount; i++){
-    NewRecipeInstructions.push(document.getElementByID(`add-recipe-form-instruction$(i)`);
+    NewRecipeInstructions.push(document.getElementByID(`add-recipe-form-instruction${i}`);
   }
   let newRecipe = {
     name: NewRecipeName,
