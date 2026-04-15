@@ -16,7 +16,7 @@ function FindRecipeByName(recipeName) {
     if (recipe.name === recipeName) {
       return recipe;
     }
-  })
+  });
 }
 
 let NewRecipeIngredientsCount = 2;
@@ -54,8 +54,11 @@ function DisplayCurrentRecipe(){
   let ingredients_string = "";
   currentRecipe.ingredients.forEach((ingredient) => {
     ingredients_string += ingredient + "\n";
-  })
+  });
   $("#recipe-ingredients-text").html(ingredients_string);
+  currentRecipe.instructions.forEach((instruction) => {
+    $("#instructions-card").append(`<p>${instruction}</p>`);
+  });
 
 function AddIngredientInput(){
   NewRecipeIngredientsCount++;
