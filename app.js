@@ -4,6 +4,7 @@ let savedRecipes = [
     category = "food",
     cook_time = "10 minutes",
     servings = "1",
+    allergens = "aquaphobia",
     ingredients = ["3 cups water", "2 teaspoons salt"],
     instructions = ["Pour the salt into the water"],
     favorite = "true"
@@ -43,6 +44,10 @@ function DisplaySavedRecipes(){
   }
 }
 
+let currentRecipe;
+
+function DisplayCurrentRecipe
+
 function AddIngredientInput(){
   NewRecipeIngredientsCount++;
   const NewRecipeIngredientsDiv = $("#add-recipe-form-ingredients-div);
@@ -60,6 +65,7 @@ function AddRecipe() {
   const NewRecipeCategory = document.getElementById("add-recipe-form-category").value;
   const NewRecipeCookTime = document.getElementById("add-recipe-form-cook-time").value;
   const NewRecipeServings = document.getElementById("add-recipe-form-servings").value;
+  const NewRecipeAllergens = document.getElementById("add-recipe-form-allergens").value;
   let NewRecipeIngredients = [];
   for (i = 1; i <= NewRecipeIngredientsCount; i++){
     NewRecipeIngredients.push(document.getElementByID(`add-recipe-form-ingredient${i}`);
@@ -73,6 +79,7 @@ function AddRecipe() {
     category: NewRecipeCategory,
     cook_time: NewRecipeCookTime,
     servings: NewRecipeServings,
+    allergens: NewRecipeAllergens,
     ingredients: NewRecipeIngredients,
     instructions: NewRecipeInstructions,
     favorite: "false"
