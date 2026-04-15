@@ -47,7 +47,15 @@ function DisplaySavedRecipes(){
 let currentRecipe;
 
 function DisplayCurrentRecipe(){
-  
+  $("#recipe-name-text").html(currentRecipe.name);
+  $("#recipe-category-text").html(currentRecipe.category);
+  $("#recipe-cook-time-text").html(currentRecipe.cook_time);
+  $("#recipe-allergens-text").html(currentRecipe.allergens);
+  let ingredients_string = "";
+  currentRecipe.ingredients.forEach((ingredient) => {
+    ingredients_string += ingredient + "\n";
+  })
+  $("#recipe-ingredients-text").html(ingredients_string);
 
 function AddIngredientInput(){
   NewRecipeIngredientsCount++;
