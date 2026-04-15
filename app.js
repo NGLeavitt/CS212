@@ -46,7 +46,8 @@ function DisplaySavedRecipes(){
 
 let currentRecipe;
 
-function DisplayCurrentRecipe
+function DisplayCurrentRecipe(){
+  
 
 function AddIngredientInput(){
   NewRecipeIngredientsCount++;
