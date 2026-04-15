@@ -10,6 +10,14 @@ let savedRecipes = [
   }
 ];
 
+function FindRecipeByName(recipeName) {
+  savedRecipes.forEach((recipe) => {
+    if (recipe.name === recipeName) {
+      return recipe;
+    }
+  })
+}
+
 let NewRecipeIngredientsCount = 2;
 let NewRecipeInstructionsCount = 2;
 
