@@ -104,3 +104,67 @@ function AddRecipe() {
   NewRecipeIngredients = 2;
   NewRecipeInstructions = 2;
 }
+
+function searchAndFilter() {
+  let query    = $("#search-input").val().toLowerCase().trim();
+  let category = $("#filter-category").val().toLowerCase();
+  let favOnly  = $("#filter-favorites").is(":checked");
+  let sortVal  = $("#filter-sort").val();
+
+  let results = [];
+  for (let i = 0; i < savedRecipes.length; i++) {
+    let recipe = savedRecipes[i];
+
+    let searchable = recipe.name + " " + recipe.category + " " + recipe.ingredients.join(" ");
+    searchable = searchable.toLowerCase();
+
+    let matchSearch   = query === ""    || searchable.includes(query);
+    let matchCategory = category === "" || recipe.category.toLowerCase() === category;
+    let matchFav      = !favOnly        || recipe.favorite === "true";
+
+    if (matchSearch && matchCategory && matchFav) {
+      results.push(recipe);
+    }
+  }
+
+  if (sortVal === "name-asc") {
+    results.sort(function(a, b) { return a.name.localeCompare(b.name); });
+  } else if (sortVal === "name-desc") {
+    results.sort(function(a, b) { return b.name.localeCompare(a.name); });
+  } else if (sortVal === "time-asc") {
+    results.sort(function(a, b) { return parseInt(a.cook_time) - parseInt(b.cook_time); });
+  } else if (sortVal === "time-desc") {
+    results.sort(function(a, b) { return parseInt(b.cook_time) - parseInt(a.cook_time); });
+  } else if (sortVal === "date-asc") {
+    results.sort(function(a, b) { return a.date_added - b.date_added; });
+  } else if (sortVal === "date-desc") {
+    results.sort(function(a, b) { return b.date_added - a.date_added; });
+  }
+
+  renderRecipes(results);
+
+  if (results.length === savedRecipes.length) {
+    $("#filter-hint").text("");
+  } else {
+    $("#filter-hint").text("Showing " + results.length + " of " + savedRecipes.length);
+  }
+}
+
+function clearFilters() {
+  $("#search-input").val("");
+  $("#filter-category").val("");
+  $("#filter-favorites").prop("checked", false);
+  $("#filter-sort").val("");
+  $("#filter-hint").text("");
+  renderRecipes(savedRecipes);
+}
+
+$(document).ready(function() {
+  DisplaySavedRecipes();
+
+  $("#search-input").on("input", searchAndFilter);
+  $("#filter-category").on("change", searchAndFilter);
+  $("#filter-favorites").on("change", searchAndFilter);
+  $("#filter-sort").on("change", searchAndFilter);
+  $("#clear-filters-btn").on("click", clearFilters);
+});
