@@ -1,0 +1,72 @@
+:root {
+  --main-bg: #FFF9ED;
+  --nav-bg: #F4D06F;
+  --accent-pink: #F2B5D4;
+  --text-dark: #5D4037;
+  --btn-action: #FF7F50;
+}
+
+body {
+  background-color: var(--main-bg);
+  color: var(--text-dark);
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.custom-navbar {
+  background-color: var(--nav-bg);
+  border-bottom: 3px solid var(--text-dark);
+  padding: 1.5rem;
+}
+
+.btn-custom {
+  background-color: var(--btn-action);
+  color: white;
+  border: 2px solid var(--text-dark);
+  text-transform: uppercase;
+  font-weight: bold;
+  border-radius: 0;
+}
+
+.btn-outline-custom {
+  background-color: transparent;
+  color: var(--text-dark);
+  border: 2px solid var(--text-dark);
+  text-transform: uppercase;
+  border-radius: 0;
+}
+
+.card {
+  background-color: white;
+  border: 2px solid var(--text-dark);
+  border-radius: 0;
+}
+
+.card-header-custom {
+  background-color: var(--accent-pink);
+  color: var(--text-dark);
+  padding: 10px;
+  border-bottom: 2px solid var(--text-dark);
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.form-control, .form-select {
+  border: 2px solid var(--text-dark);
+  border-radius: 0;
+  background-color: white;
+  text-align: center;
+}
+
+.stat-container {
+  border: 2px solid var(--text-dark);
+  padding: 40px;
+  background: white;
+}
+
+footer {
+  background-color: var(--text-dark);
+  color: var(--main-bg);
+  text-transform: uppercase;
+  font-size: 0.8rem;
+}
