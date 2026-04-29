@@ -15,7 +15,7 @@ function findCurrent() {
 
 function viewDetails(name) {
   localStorage.setItem("currentRecipeView", name);
-  window.location.href = "basic_page.html";
+  window.location.href = "/group_5_recipe_tracker/basic_page.html";
 }
 
 let NewRecipeIngredientsCount = 1;
@@ -73,7 +73,7 @@ async function processRecipe(isUpdate) {
   }
 
   localStorage.setItem("savedRecipes", JSON.stringify(savedRecipes));
-  window.location.href = "index.html";
+  window.location.href = "/group_5_recipe_tracker/index.html";
 }
 
 function ApplyFilters() {
@@ -83,14 +83,13 @@ function ApplyFilters() {
   let sortVal = $("#filter-sort").val();
 
   let results = savedRecipes.filter(recipe => {
-    let searchable = (recipe.name + " " + recipe.category + " " + recipe.ingredients.join(" ")).toLowerCase();
+    let searchable = recipe.name.toLowerCase();
     let matchSearch = query === "" || searchable.includes(query);
     let matchCategory = category === "" || recipe.category === category;
     let matchFav = !favOnly || recipe.favorite === "true";
     return matchSearch && matchCategory && matchFav;
   });
 
-  // Sorting
   if (sortVal === "name-asc") results.sort((a, b) => a.name.localeCompare(b.name));
   else if (sortVal === "time-asc") results.sort((a, b) => parseInt(a.cook_time) - parseInt(b.cook_time));
   else results.sort((a, b) => b.date_added - a.date_added);
@@ -101,7 +100,6 @@ function ApplyFilters() {
 function renderRecipes(list) {
   const dashboard = $("#recipe-dashboard");
   dashboard.empty();
-  
   if (list.length === 0) {
     dashboard.append("<p class='text-center'>No recipes found.</p>");
     return;
@@ -124,5 +122,10 @@ function renderRecipes(list) {
 }
 
 $(document).ready(function() {
-  if ($("#recipe-dashboard").length) ApplyFilters();
+  if ($("#recipe-dashboard").length) {
+    ApplyFilters();
+    $("#search-input").on("input", ApplyFilters);
+    $("#filter-category, #filter-sort").on("change", ApplyFilters);
+    $("#filter-favorites").on("change", ApplyFilters);
+  }
 });
