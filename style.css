@@ -1,72 +1,63 @@
-:root {
-  --main-bg: #FFF9ED;
-  --nav-bg: #F4D06F;
-  --accent-pink: #F2B5D4;
-  --text-dark: #5D4037;
-  --btn-action: #FF7F50;
-}
-
 body {
-  background-color: var(--main-bg);
-  color: var(--text-dark);
-  font-family: 'Courier New', Courier, monospace;
+  background-color: #FFF5E1;
+  color: #5D4037;
+  font-family: 'Segoe UI', Arial, sans-serif;
 }
 
-.custom-navbar {
-  background-color: var(--nav-bg);
-  border-bottom: 3px solid var(--text-dark);
-  padding: 1.5rem;
+.navbar {
+  background-color: #FFD966;
+  border-bottom: 3px solid #5D4037;
 }
 
-.btn-custom {
-  background-color: var(--btn-action);
+.navbar-brand {
+  color: #5D4037 !important;
+}
+
+.button-box-main {
+  background-color: #F6E2B3;
+  border: 2px solid #5D4037;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 30px;
+  border-radius: 4px;
+}
+
+.btn-custom-action {
+  background-color: #FF7F50;
   color: white;
-  border: 2px solid var(--text-dark);
-  text-transform: uppercase;
+  border: 2px solid #5D4037;
   font-weight: bold;
-  border-radius: 0;
+  text-transform: uppercase;
+  padding: 10px 20px;
 }
 
-.btn-outline-custom {
+.btn-custom-outline {
   background-color: transparent;
-  color: var(--text-dark);
-  border: 2px solid var(--text-dark);
+  color: #5D4037;
+  border: 2px solid #5D4037;
+  font-weight: bold;
   text-transform: uppercase;
-  border-radius: 0;
+  padding: 10px 20px;
+}
+
+.recipe-title-bar {
+  background-color: #FF6347; /* Tomato Red */
+  color: white;
+  padding: 10px;
+  text-align: center;
+  font-weight: bold;
+  border-bottom: 2px solid #5D4037;
 }
 
 .card {
+  border: 2px solid #5D4037;
   background-color: white;
-  border: 2px solid var(--text-dark);
-  border-radius: 0;
-}
-
-.card-header-custom {
-  background-color: var(--accent-pink);
-  color: var(--text-dark);
-  padding: 10px;
-  border-bottom: 2px solid var(--text-dark);
-  font-weight: bold;
-  text-transform: uppercase;
-  text-align: center;
-}
-
-.form-control, .form-select {
-  border: 2px solid var(--text-dark);
-  border-radius: 0;
-  background-color: white;
-  text-align: center;
-}
-
-.stat-container {
-  border: 2px solid var(--text-dark);
-  padding: 40px;
-  background: white;
 }
 
 footer {
-  background-color: var(--text-dark);
-  color: var(--main-bg);
-  text-transform: uppercase;
-  font-size: 0.8rem;
+  background-color: #3E2723;
+  color: #FFF5E1;
 }
