@@ -10,32 +10,32 @@
 
   <nav class="navbar px-4 py-3">
     <a href="/group_5_recipe_tracker/index.html" class="btn btn-sm btn-custom-outline">← Home</a>
-    <span class="navbar-brand h1 mb-0 fw-bold mx-auto">SYSTEM STATISTICS</span>
+    <span class="navbar-brand h1 mb-0 fw-bold mx-auto">Archive overview</span>
   </nav>
 
   <div class="container mt-5 flex-grow-1">
     <div class="row g-4 justify-content-center mb-5">
       <div class="col-md-5">
         <div class="card p-4 text-center shadow-sm">
-          <p class="text-muted small mb-1 text-uppercase fw-bold">Total Entries</p>
+          <p class="text-muted small mb-1 fw-bold">Total entries</p>
           <h1 class="display-3 fw-bold" id="stat-total" style="color: #FF7F50;">0</h1>
         </div>
       </div>
       <div class="col-md-5">
         <div class="card p-4 text-center shadow-sm">
-          <p class="text-muted small mb-1 text-uppercase fw-bold">Favorites</p>
+          <p class="text-muted small mb-1 fw-bold">Favorites</p>
           <h1 class="display-3 fw-bold" id="stat-favs" style="color: #FF6347;">0</h1>
         </div>
       </div>
       <div class="col-md-5">
         <div class="card p-4 text-center shadow-sm">
-          <p class="text-muted small mb-1 text-uppercase fw-bold">Categories Used</p>
+          <p class="text-muted small mb-1 fw-bold">Categories used</p>
           <h1 class="display-3 fw-bold" id="stat-cats" style="color: #5D4037;">0</h1>
         </div>
       </div>
       <div class="col-md-5">
         <div class="card p-4 text-center shadow-sm">
-          <p class="text-muted small mb-1 text-uppercase fw-bold">Avg. Cook Time</p>
+          <p class="text-muted small mb-1 fw-bold">Average cook time</p>
           <h1 class="display-3 fw-bold" id="stat-avg" style="color: #FFD966; -webkit-text-stroke: 1px #5D4037;">0</h1>
         </div>
       </div>
@@ -44,8 +44,8 @@
     <div class="row justify-content-center">
       <div class="col-md-10">
         <div class="button-box-main">
-          <a href="/group_5_recipe_tracker/add_recipe.html" class="btn btn-custom-action">Add New Recipe</a>
-          <a href="/group_5_recipe_tracker/index.html" class="btn btn-custom-outline px-5">Return to Dashboard</a>
+          <a href="/group_5_recipe_tracker/add_recipe.html" class="btn btn-custom-action">Add recipe</a>
+          <a href="/group_5_recipe_tracker/index.html" class="btn btn-custom-outline px-5">Back to archive</a>
         </div>
       </div>
     </div>
@@ -75,7 +75,7 @@
       $("#stat-total").text(total);
       $("#stat-favs").text(favs);
       $("#stat-cats").text(cats);
-      $("#stat-avg").text(avg + "m");
+      $("#stat-avg").text(avg + " min");
     });
   </script>
 </body>

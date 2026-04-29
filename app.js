@@ -113,8 +113,8 @@ function renderRecipes(list) {
           <div class="recipe-title-bar">${recipe.name} ${recipe.favorite === "true" ? '<3' : ''}</div>
           ${img}
           <div class="card-body text-center">
-            <p class="small text-uppercase fw-bold">${recipe.category} • ${recipe.cook_time}m</p>
-            <button class="btn btn-custom-outline btn-sm w-100" onclick="viewDetails('${recipe.name}')">View Entry</button>
+            <p class="small fw-bold">${recipe.category} • ${recipe.cook_time} min</p>
+            <button class="btn btn-custom-outline btn-sm w-100" onclick="viewDetails('${recipe.name}')">View recipe</button>
           </div>
         </div>
       </div>`);

@@ -8,20 +8,20 @@
 </head>
 <body>
   <nav class="navbar px-4 py-3">
-    <span class="navbar-brand h1 mb-0 fw-bold">RECIPE ARCHIVE</span>
+    <span class="navbar-brand h1 mb-0 fw-bold">Recipe Archive</span>
   </nav>
 
   <div class="container mt-4">
     <div class="button-box-main shadow-sm">
-      <input type="text" id="search-input" class="form-control w-50 border-dark" placeholder="Search name or ingredients...">
-      <a href="/group_5_recipe_tracker/add_recipe.html" class="btn btn-custom-action">+ Add</a>
+      <input type="text" id="search-input" class="form-control w-50 border-dark" placeholder="Search recipes by name">
+      <a href="/group_5_recipe_tracker/add_recipe.html" class="btn btn-custom-action">+ Add recipe</a>
       <a href="/group_5_recipe_tracker/stats.html" class="btn btn-custom-outline">Stats</a>
     </div>
 
     <div class="row justify-content-center mb-5 g-3">
       <div class="col-md-4">
         <select id="filter-category" class="form-select border-dark">
-          <option value="">All Categories</option>
+          <option value="">All categories</option>
           <option value="Breakfast">Breakfast</option>
           <option value="Lunch">Lunch</option>
           <option value="Dinner">Dinner</option>
@@ -30,14 +30,14 @@
       </div>
       <div class="col-md-4">
         <select id="filter-sort" class="form-select border-dark">
-          <option value="date-desc">Newest First</option>
-          <option value="name-asc">A-Z</option>
-          <option value="time-asc">Shortest Time</option>
+          <option value="date-desc">Newest</option>
+          <option value="name-asc">Name A–Z</option>
+          <option value="time-asc">Shortest cook time</option>
         </select>
       </div>
       <div class="col-md-2 d-flex align-items-center justify-content-center">
         <input type="checkbox" id="filter-favorites" class="form-check-input border-dark">
-        <label class="ms-2 fw-bold small">FAVORITES</label>
+        <label class="ms-2 fw-bold small">Show favorites</label>
       </div>
     </div>
 
@@ -45,7 +45,7 @@
   </div>
 
   <footer class="text-center py-4 mt-5">
-    <a href="/group_5_recipe_tracker/contact_page.html" class="btn btn-link text-white text-decoration-none">CONTACT US!</a>
+    <a href="/group_5_recipe_tracker/contact_page.html" class="btn btn-link text-white text-decoration-none">Contact us</a>
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
